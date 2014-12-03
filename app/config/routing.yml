@@ -1,4 +1,4 @@
 uek_demo:
     resource: "@UekDemoBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /uek-demo
 

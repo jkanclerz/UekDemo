@@ -1,3 +1,7 @@
+uek_demo_thread:
+    resource: "@UekDemoBundle/Resources/config/routing/thread.yml"
+    prefix:   /thread
+
 uek_demo_homepage:
     path:     /hello/{name}
     defaults: { _controller: UekDemoBundle:Default:index }

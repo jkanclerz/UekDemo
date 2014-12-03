@@ -1,0 +1,37 @@
+thread:
+    path:     /
+    defaults: { _controller: "UekDemoBundle:Thread:index" }
+
+thread_show:
+    path:     /{id}/show
+    defaults:
+        _controller: "UekDemoBundle:Thread:show"
+    requirements:
+        id: \d+
+
+thread_show_by_slug:
+    path:     /{slug}/show
+    defaults: { _controller: "UekDemoBundle:Thread:showBySlug" }
+
+thread_new:
+    path:     /new
+    defaults: { _controller: "UekDemoBundle:Thread:new" }
+
+thread_create:
+    path:     /create
+    defaults: { _controller: "UekDemoBundle:Thread:create" }
+    requirements: { _method: post }
+
+thread_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UekDemoBundle:Thread:edit" }
+
+thread_update:
+    path:     /{id}/update
+    defaults: { _controller: "UekDemoBundle:Thread:update" }
+    requirements: { _method: post|put }
+
+thread_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UekDemoBundle:Thread:delete" }
+    requirements: { _method: post|delete }

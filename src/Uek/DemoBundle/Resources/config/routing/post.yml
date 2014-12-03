@@ -1,0 +1,30 @@
+post:
+    path:     /
+    defaults: { _controller: "UekDemoBundle:Post:index" }
+
+post_show:
+    path:     /{id}/show
+    defaults: { _controller: "UekDemoBundle:Post:show" }
+
+post_new:
+    path:     /new
+    defaults: { _controller: "UekDemoBundle:Post:new" }
+
+post_create:
+    path:     /create
+    defaults: { _controller: "UekDemoBundle:Post:create" }
+    requirements: { _method: post }
+
+post_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UekDemoBundle:Post:edit" }
+
+post_update:
+    path:     /{id}/update
+    defaults: { _controller: "UekDemoBundle:Post:update" }
+    requirements: { _method: post|put }
+
+post_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UekDemoBundle:Post:delete" }
+    requirements: { _method: post|delete }
