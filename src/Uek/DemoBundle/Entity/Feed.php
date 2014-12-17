@@ -25,15 +25,60 @@ class Feed
      * @ORM\Column(type="text")
      */
 	protected $content;
-	
-	/**
-     *  @ORM\OneToOne(targetEntity="Uek\DemoBundle\Entity\Image")
+
+    /**
+     * Get id
+     *
+     * @return integer 
      */
-	protected $image;
-	
-	/**
-     * @ORM\ManyToMany(targetEntity="Uek\DemoBundle\Entity\Tag")
-     * @ORM\JoinTable()
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Feed
      */
-	protected $tags; 
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     * @return Feed
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string 
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
 }

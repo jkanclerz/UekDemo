@@ -2,10 +2,6 @@ uek_demo:
     resource: "@UekDemoBundle/Resources/config/routing.yml"
     prefix:   /
 
-uek_about:
-    resource: "@UekDemoBundle/Resources/config/routing.yml"
-    prefix:   /about
-
 app:
     resource: @AppBundle/Controller/
     type:     annotation

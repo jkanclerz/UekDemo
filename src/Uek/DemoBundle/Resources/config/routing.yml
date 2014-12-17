@@ -2,6 +2,10 @@ uek_demo_questionnaire:
     resource: "@UekDemoBundle/Resources/config/routing/questionnaire.yml"
     prefix:   /questionnaire
 
+uek_demo_feed:
+    resource: "@UekDemoBundle/Resources/config/routing/feed.yml"
+    prefix: /mywall
+
 uek_demo_homepage:
     path:     /hello/{name}
     defaults: { _controller: UekDemoBundle:Default:index }
