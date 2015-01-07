@@ -1,0 +1,8 @@
+{% extends 'UekDemoBundle::layout.html.twig' %}
+
+{% block content %}
+	<div class="page-header">
+		<h1>Hello <small>{{ name }}</small></h1>
+		<h2>{{ birthdate|date('Y-m-d') }}</h2>
+	</div>
+{% endblock %}

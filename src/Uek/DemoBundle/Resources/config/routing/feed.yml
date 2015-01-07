@@ -1,9 +1,0 @@
-uek_demo_feed_create:
-    path: /new
-    defaults:
-        _controller: UekDemoBundle:Feed:create
-
-uek_demo_feed_index:
-    path: /
-    defaults:
-        _controller: UekDemoBundle:Feed:index

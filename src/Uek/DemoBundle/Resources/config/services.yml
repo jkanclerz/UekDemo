@@ -2,3 +2,16 @@ services:
 #    uek_demo.example:
 #        class: Uek\DemoBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+    uek_demo.provider.name:
+        class: Uek\DemoBundle\MyName\NameProvider
+        arguments:
+            - %my.name%
+    uek_demo.mailer:
+        class: Uek\DemoBundle\Mailer\Mailer
+        arguments:
+            - @uek_demo.provider.name
+            - %my.email%
+    uek_demo.storage.session:
+        class: Uek\DemoBundle\Storage\SessionStorage
+        arguments:
+            - @session

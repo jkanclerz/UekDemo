@@ -1,11 +1,14 @@
-uek_demo_questionnaire:
-    resource: "@UekDemoBundle/Resources/config/routing/questionnaire.yml"
-    prefix:   /questionnaire
-
-uek_demo_feed:
-    resource: "@UekDemoBundle/Resources/config/routing/feed.yml"
-    prefix: /mywall
-
 uek_demo_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: UekDemoBundle:Default:index }
+    path:     /feeds
+    defaults: { _controller: UekDemoBundle:Feed:index }
+
+uek_demo_about_me:
+    path:     /aboutme
+    defaults: { _controller: UekDemoBundle:About:index }
+
+uek_demo_services_hello:
+    path: /services/hello
+    defaults: { _controller: UekDemoBundle:Services:hello }
+uek_demo_services_show_session:
+    path: /services/show-session
+    defaults: { _controller: UekDemoBundle:Services:showSession }
